@@ -1,0 +1,18 @@
+/**
+ * Import packages
+ */
+const CLI = require('./index');
+
+/**
+ * Initialize commands
+ */
+// const TestCommand = require('./path/to/your/command');
+
+const Commands = [
+  // TestCommand
+];
+
+/**
+ * Initialize CLI
+ */
+CLI.registerCommands(Commands).exec();
