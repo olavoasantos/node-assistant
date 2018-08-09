@@ -1,7 +1,7 @@
 /**
  * Import packages
  */
-const CLI = require('./index');
+const CLI = require('./index').default;
 
 /**
  * Initialize commands
@@ -9,7 +9,7 @@ const CLI = require('./index');
 // const TestCommand = require('./path/to/your/command');
 
 const Commands = [
-  // TestCommand
+  // TestCommand,
 ];
 
 /**
