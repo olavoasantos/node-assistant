@@ -1,6 +1,6 @@
 {
   "name": "node-assistant",
-  "version": "0.1.0",
+  "version": "0.0.1",
   "description": "A command-line interface to assist you with your application",
   "main": "index.js",
   "scripts": {
