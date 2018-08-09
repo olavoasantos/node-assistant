@@ -1,7 +1,5 @@
-const TestCommand = require('./list/TestCommand');
-// const FileCommand = require('./list/FileCommand');
+const CreateCommand = require('./list/CreateCommand');
 
 module.exports = [
-  TestCommand,
-  // FileCommand,
+  CreateCommand,
 ];

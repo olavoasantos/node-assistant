@@ -1,0 +1,12 @@
+const { BaseCommand, createFile, File } = require('node-assistant');
+
+class {{ name }} extends BaseCommand {
+  run() {
+    // Write your command here =)
+  }
+}
+
+{{ name }}.COMMAND = '{{ command }}';
+{{ name }}.DESCRIPTION = '{{ description }}';
+
+module.exports = {{ name }};
