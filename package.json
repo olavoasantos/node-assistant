@@ -1,12 +1,12 @@
 {
   "name": "node-assistant",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "A command-line interface to assist you with your application",
   "main": "index.js",
   "scripts": {
+    "test": "jest src",
     "lint:file": "eslint --fix",
     "lint": "eslint src/** --fix",
-    "test": "jest src",
     "coverage": "jest --collectCoverageFrom=src/**.js --coverage src --config jest.config.js"
   },
   "keywords": [],
