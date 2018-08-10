@@ -1,4 +1,4 @@
-const { BaseCommand, createFile, File } = require('node-assistant');
+const { BaseCommand, createFile } = require('node-assistant');
 
 class {{ name }} extends BaseCommand {
   run() {

@@ -1,4 +1,4 @@
-const help = require('./help');
+const help = require('./help').main;
 const commands = require('./commands');
 const parseArgs = require('./parseArgs');
 
@@ -60,7 +60,7 @@ class Cli {
       throw new Error(`Command ${this.command} not found`);
     }
 
-    command.handle.run();
+    command.handle.$run();
   }
 }
 
