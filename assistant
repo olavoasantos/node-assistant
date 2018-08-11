@@ -1,10 +1,13 @@
 /**
- * Import packages
+ * Import package the node-assitant package
  */
 const CLI = require('./index').default;
 
 /**
  * Initialize commands
+ * This is the place where you can initialize your commands.
+ * First import the command file, and then add it
+ * to the Commands array.
  */
 // const TestCommand = require('./path/to/your/command');
 
@@ -14,5 +17,7 @@ const Commands = [
 
 /**
  * Initialize CLI
+ * This line effectively register the list of custom
+ * commands and then executes the process.
  */
 CLI.registerCommands(Commands).exec();

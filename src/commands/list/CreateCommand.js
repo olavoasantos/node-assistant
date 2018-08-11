@@ -11,7 +11,7 @@ class CreateCommand extends BaseCommand {
     const variables = { name, command, description: description || '' };
 
     if (!this.silent) this.$info('• Creating file...');
-    this.createFile(path, [__dirname, './CreateCommand.stub'], variables);
+    this.createFile(`${path}/${name}.js`, [__dirname, './CreateCommand.stub'], variables);
 
     if (!this.silent) this.$success(`✓ Command '${this.name}' created!`);
 

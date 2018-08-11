@@ -9,4 +9,12 @@ class {{ name }} extends BaseCommand {
 {{ name }}.COMMAND = '{{ command }}';
 {{ name }}.DESCRIPTION = '{{ description }}';
 
+{{ name }}.OPTIONS = [
+  // { name: 'OPTION NAME', description: 'OPTION DESCRIPTION' },
+];
+
+{{ name }}.FLAGS = [
+  // { name: 'FLAG NAME', alias: 'FLAG ALIAS', description: 'FLAG DESCRIPTION', default: 'FLAG DEFAULT VALUE' },
+];
+
 module.exports = {{ name }};
