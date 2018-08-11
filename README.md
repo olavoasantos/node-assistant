@@ -4,6 +4,12 @@ A command-line interface to assist you with your application. The package provid
 
 ## Usage
 
+### Installation
+
+```bash
+yarn add -D node-assistant // or npm install --save-dev node-assistant
+```
+
 ### Creating an assistant file
 
 Start by creating an `assistant` file in your project's root folder. If you wish, you can copy the file included (`./node_modules/node-assistant/assistant`). Basically it looks like this:
