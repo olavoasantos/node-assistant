@@ -1,15 +1,18 @@
 {
   "name": "node-assistant",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "description": "A command-line interface to assist you with your application",
   "main": "index.js",
   "scripts": {
     "test": "jest src",
+    "bump": "bump --prompt",
     "lint:file": "eslint --fix",
     "lint": "eslint src/** --fix",
     "coverage": "jest --collectCoverageFrom=src/**.js --coverage src --config jest.config.js"
   },
-  "keywords": ["cli"],
+  "keywords": [
+    "cli"
+  ],
   "author": {
     "name": "Olavo Amorim Santos",
     "email": "olavo.a.santos@gmail.com"
