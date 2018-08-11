@@ -2,16 +2,35 @@
 const File = require('../file');
 const Console = require('../console');
 const help = require('../help').command;
+const createFile = require('../createFile');
 
 class BaseCommand {
   constructor(options, flags) {
     this.$flags = flags;
     this.$options = options;
+    this.silent = false;
     this.$init();
   }
 
   $init() {
+    this.$addDefaultFlags();
     this.$parseArgs();
+  }
+
+  $addDefaultFlags() {
+    // Silent
+    this.constructor.FLAGS.push({
+      name: 'silent',
+      alias: 's',
+      default: false,
+      description: 'Run command silently',
+    });
+    // Help
+    this.constructor.FLAGS.push({
+      name: 'help',
+      alias: 'h',
+      description: 'Quick help on command',
+    });
   }
 
   $parseArgs() {
@@ -41,6 +60,11 @@ class BaseCommand {
 
   loadContentsFrom(...filePath) {
     return File(...filePath);
+  }
+
+  createFile(path, stub, variables) {
+    const stubPath = Array.isArray(stub) ? stub : [stub];
+    createFile(path, this.loadContentsFrom(...stubPath), variables);
   }
 
   get $info() {
