@@ -19,7 +19,7 @@ Start by creating an `assistant` file in your project's root folder. If you wish
 /**
  * Import package the node-assitant package
  */
-const CLI = require('./index').default;
+const CLI = require('node-assistant').default;
 
 /**
  * Initialize commands

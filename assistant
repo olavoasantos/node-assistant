@@ -1,7 +1,7 @@
 /**
  * Import package the node-assitant package
  */
-const CLI = require('./index').default;
+const CLI = require('node-assistant').default;
 
 /**
  * Initialize commands
