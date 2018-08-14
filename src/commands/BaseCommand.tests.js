@@ -58,7 +58,7 @@ describe('BaseCommand class', () => {
   it('should run the help function if the help flag is set to true', () => {
     const command = new Command([], { help: true });
     let helpWasCalled = false;
-    command.help = () => { helpWasCalled = true; };
+    command.helpBlock = () => { helpWasCalled = true; };
 
     expect(helpWasCalled).toBeFalsy();
     command.$run();

@@ -8,7 +8,7 @@ class BaseCommand {
   constructor(options = [], flags = {}) {
     this.$flags = flags;
     this.$options = options;
-    this.help = help;
+    this.helpBlock = help;
     this.$init();
   }
 
@@ -52,7 +52,7 @@ class BaseCommand {
 
   $run() {
     if (this.$flags.h || this.$flags.help) {
-      this.help(this.constructor);
+      this.helpBlock(this.constructor);
       return;
     }
     this.run();
