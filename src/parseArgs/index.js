@@ -1,10 +1,10 @@
 const flag = require('./flag');
 const option = require('./option');
 
-const parseArgs = () => {
+const parseArgs = (parameters) => {
   const flags = {};
   const options = [];
-  const args = [...process.argv.slice(2)];
+  const args = [...parameters];
   const command = args.shift();
 
   args.forEach((val) => {

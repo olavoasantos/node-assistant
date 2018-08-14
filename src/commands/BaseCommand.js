@@ -5,10 +5,10 @@ const help = require('../help').command;
 const createFile = require('../createFile');
 
 class BaseCommand {
-  constructor(options, flags) {
+  constructor(options = [], flags = {}) {
     this.$flags = flags;
     this.$options = options;
-    this.silent = false;
+    this.help = help;
     this.$init();
   }
 
@@ -52,7 +52,7 @@ class BaseCommand {
 
   $run() {
     if (this.$flags.h || this.$flags.help) {
-      help(this.constructor);
+      this.help(this.constructor);
       return;
     }
     this.run();
