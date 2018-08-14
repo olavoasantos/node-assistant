@@ -1,24 +1,27 @@
 const help = require('./help').main;
-const commands = require('./commands');
+const defaultCommands = require('./commands');
 const parseArgs = require('./parseArgs');
 
 class Cli {
   constructor() {
     this.flags = {};
     this.options = [];
-    this.command = [];
+    this.command = '';
     this.commands = {};
+    this.help = help;
+    this.parseArgs = parseArgs;
+    this.defaultCommands = defaultCommands;
   }
 
   init() {
     this.getArgs();
-    this.initCommands(commands);
+    this.initCommands(this.defaultCommands);
 
     return this;
   }
 
   getArgs() {
-    const { command, options, flags } = parseArgs();
+    const { command, options, flags } = this.parseArgs(process.argv.slice(2));
     this.command = command;
     this.options = options;
     this.flags = flags;
@@ -51,7 +54,7 @@ class Cli {
 
   exec() {
     if (!this.command) {
-      help(this.commands);
+      this.help(this.commands);
       return;
     }
 
