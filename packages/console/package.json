@@ -1,0 +1,39 @@
+{
+  "name": "@node-assistant/console",
+  "version": "0.0.0",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "test": "jest --config jest.config.js",
+    "lint": "tslint -p tsconfig.build.json",
+    "format": "prettier --write \"src/**/*.ts\"",
+    "build": "tsc -p tsconfig.build.json --pretty",
+    "watch": "nodemon --watch src --ext ts --exec 'yarn build'"
+  },
+  "files": [
+    "dist/**/*"
+  ],
+  "author": {
+    "name": "Olavo Amorim Santos",
+    "email": "olavo.a.santos@gmail.com"
+  },
+  "homepage": "https://olavoasantos.github.io/node-factory/",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/olavoasantos/node-factory.git"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "@types/jest": "^24.0.15",
+    "@types/node": "^12.0.10",
+    "jest": "^24.8.0",
+    "nodemon": "^1.19.1",
+    "ts-jest": "^24.0.2",
+    "tslint": "^5.18.0",
+    "tslint-config-prettier": "^1.18.0",
+    "typescript": "^3.5.2"
+  },
+  "dependencies": {
+    "@node-assistant/core": "^0.0.0"
+  }
+}
