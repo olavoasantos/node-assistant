@@ -1,0 +1,12 @@
+{
+    "src/**/*.{js, jsx}": [
+        "lerna run format",
+        "lerna run lint",
+        "git add"
+    ],
+    "src/**/*.{ts, tsx}": [
+        "lerna run format",
+        "lerna run lint",
+        "git add"
+    ],
+}

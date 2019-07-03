@@ -1,34 +1,36 @@
 {
-  "name": "node-assistant",
-  "version": "0.1.6",
-  "description": "A command-line interface to assist you with your application",
+  "name": "node-assistant-monorepo",
+  "version": "0.0.0",
   "main": "index.js",
-  "scripts": {
-    "test": "jest src",
-    "bump": "bump --prompt",
-    "lint:file": "eslint --fix",
-    "lint": "eslint src/** --fix",
-    "coverage": "jest --collectCoverageFrom=src/**.js --coverage src --config jest.config.js"
-  },
-  "keywords": [
-    "cli"
-  ],
+  "license": "MIT",
   "author": {
     "name": "Olavo Amorim Santos",
     "email": "olavo.a.santos@gmail.com"
   },
-  "homepage": "https://github.com/olavoasantos/node-assistant",
-  "license": "MIT",
-  "dependencies": {
-    "chalk": "^2.4.1",
-    "mustache": "^2.3.1"
+  "homepage": "https://olavoasantos.github.io/node-assistant/",
+  "repository": {
+    "type" : "git",
+    "url" : "https://github.com/olavoasantos/node-assistant.git"
   },
+  "scripts": {
+    "build": "lerna run build --stream",
+    "start": "lerna run watch --parallel --stream"
+  },
+  "publishConfig": {
+    "access": "restricted"
+  },
+  "private": true,
+  "workspaces": [
+    "packages/*",
+    "services/*"
+  ],
   "devDependencies": {
-    "eslint": "^5.3.0",
-    "eslint-config-airbnb-base": "^13.0.0",
-    "eslint-plugin-import": "^2.13.0",
-    "eslint-plugin-jest": "^21.18.0",
-    "jest": "^23.4.2",
-    "version-bump-prompt": "^4.1.0"
+    "@commitlint/cli": "^7.5.2",
+    "@commitlint/config-conventional": "^7.5.0",
+    "husky": "^1.3.1",
+    "lerna": "^3.13.3",
+    "lint-staged": "^8.1.5",
+    "node-assistant": "^0.1.6",
+    "prettier": "^1.17.0"
   }
 }
