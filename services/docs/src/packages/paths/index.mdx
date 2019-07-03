@@ -1,0 +1,58 @@
+---
+name: Paths
+menu: Packages
+route: /packages/paths
+---
+
+# Paths
+
+<!-- About -->
+
+## Installation
+
+```bash
+yarn add @node-assistant/paths
+```
+
+## Module
+
+### - **`parse(argv: string[]): IArgs`**
+
+#### Arguments
+
+- `argv`: Array of strings. The function expects Node's `process.argv`.
+
+#### Returns
+
+- `IArgs`: Object containing parsed `flags` and `options`.
+
+## Toolbox
+
+### - `command`
+
+### - `flags`
+
+### - `options`
+
+## Types
+
+### Interfaces
+
+#### IArgs
+
+```typescript
+interface IArgs {
+  options: any[];
+  flags: { [key: string]: any };
+}
+```
+
+### Types
+
+#### tArgs
+
+```typescript
+type tArgs = (args: string[]) => IArgs
+```
+
+## Examples
