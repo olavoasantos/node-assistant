@@ -1,5 +1,12 @@
-import Module from './Module';
+import { IModule } from '@node-assistant/core';
+import Commands from './Commands';
 
-export { ICommand, ICommandModule, tCommandList } from './Commands/contracts';
+const Module: IModule = {
+  name: 'commands',
+  install() {
+    return new Commands();
+  },
+};
 
 export default Module;
+export { ICommand, ICommandModule, tCommandList } from './Commands/contracts';
