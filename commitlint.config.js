@@ -31,6 +31,7 @@ module.exports = {
 				'CI',
 				'DOCS',
 				'FEAT',
+				'LINT',
 				'PERF',
 				'REFACTOR',
 				'REVERT',
