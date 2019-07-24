@@ -9,7 +9,7 @@ const Module: IModule = {
   toolbox(app: IApp) {
     const { flags, options } = app.modules.args.parse(process.argv);
     const command = options.shift();
-    
+
     return { command, flags, options };
   },
 };
