@@ -1,5 +1,18 @@
-import Module from './Module';
+import { IApp, IModule } from '@node-assistant/core';
+import parse from './parse';
 
-export { IArgs, tArgs } from './parse/contracts';
+const Module: IModule = {
+  name: 'args',
+  install() {
+    return { parse };
+  },
+  toolbox(app: IApp) {
+    const { flags, options } = app.modules.args.parse(process.argv);
+    const command = options.shift();
+    
+    return { command, flags, options };
+  },
+};
 
 export default Module;
+export { IArgs, tArgs } from './parse/contracts';
