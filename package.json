@@ -13,8 +13,12 @@
     "url": "https://github.com/olavoasantos/node-assistant.git"
   },
   "scripts": {
+    "format": "lerna run format --parallel --stream",
+    "bootstrap": "lerna bootstrap",
     "build": "lerna run build --stream",
-    "start": "lerna run watch --parallel --stream"
+    "lint": "lerna run lint --parallel --stream",
+    "start": "lerna run watch --parallel --stream",
+    "test": "lerna run test --parallel --stream"
   },
   "publishConfig": {
     "access": "restricted"
